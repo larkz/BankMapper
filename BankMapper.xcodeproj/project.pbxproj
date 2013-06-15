@@ -23,6 +23,11 @@
 		DB3422CF176A66580050B301 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3422AA176A66580050B301 /* Foundation.framework */; };
 		DB3422D7176A66580050B301 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB3422D5176A66580050B301 /* InfoPlist.strings */; };
 		DB3422DA176A66580050B301 /* BankMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3422D9176A66580050B301 /* BankMapperTests.m */; };
+		DB3422E5176A69C10050B301 /* mainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3422E4176A69C10050B301 /* mainMenuViewController.m */; };
+		DB3422F4176BFD490050B301 /* mapBanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3422F3176BFD490050B301 /* mapBanksViewController.m */; };
+		DB3422FB176C00930050B301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3422FA176C00930050B301 /* MapKit.framework */; };
+		DB342306176D11620050B301 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB342305176D11620050B301 /* MyAnnotation.m */; };
+		DB342309176D15D60050B301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB342308176D15D60050B301 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,14 @@
 		DB3422D6176A66580050B301 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB3422D8176A66580050B301 /* BankMapperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankMapperTests.h; sourceTree = "<group>"; };
 		DB3422D9176A66580050B301 /* BankMapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankMapperTests.m; sourceTree = "<group>"; };
+		DB3422E3176A69C10050B301 /* mainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainMenuViewController.h; sourceTree = "<group>"; };
+		DB3422E4176A69C10050B301 /* mainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainMenuViewController.m; sourceTree = "<group>"; };
+		DB3422F2176BFD490050B301 /* mapBanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mapBanksViewController.h; path = ../mapBanksViewController.h; sourceTree = "<group>"; };
+		DB3422F3176BFD490050B301 /* mapBanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mapBanksViewController.m; path = ../mapBanksViewController.m; sourceTree = "<group>"; };
+		DB3422FA176C00930050B301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DB342304176D11620050B301 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		DB342305176D11620050B301 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		DB342308176D15D60050B301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB342309176D15D60050B301 /* CoreLocation.framework in Frameworks */,
+				DB3422FB176C00930050B301 /* MapKit.framework in Frameworks */,
 				DB3422A9176A66580050B301 /* UIKit.framework in Frameworks */,
 				DB3422AB176A66580050B301 /* Foundation.framework in Frameworks */,
 				DB3422AD176A66580050B301 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +102,10 @@
 		DB342299176A66580050B301 = {
 			isa = PBXGroup;
 			children = (
+				DB342308176D15D60050B301 /* CoreLocation.framework */,
+				DB342304176D11620050B301 /* MyAnnotation.h */,
+				DB342305176D11620050B301 /* MyAnnotation.m */,
+				DB3422FA176C00930050B301 /* MapKit.framework */,
 				DB3422AE176A66580050B301 /* BankMapper */,
 				DB3422D2176A66580050B301 /* BankMapperTests */,
 				DB3422A7176A66580050B301 /* Frameworks */,
@@ -120,6 +139,10 @@
 				DB3422B7176A66580050B301 /* AppDelegate.h */,
 				DB3422B8176A66580050B301 /* AppDelegate.m */,
 				DB3422C0176A66580050B301 /* MainStoryboard.storyboard */,
+				DB3422E3176A69C10050B301 /* mainMenuViewController.h */,
+				DB3422E4176A69C10050B301 /* mainMenuViewController.m */,
+				DB3422F2176BFD490050B301 /* mapBanksViewController.h */,
+				DB3422F3176BFD490050B301 /* mapBanksViewController.m */,
 				DB3422C3176A66580050B301 /* ViewController.h */,
 				DB3422C4176A66580050B301 /* ViewController.m */,
 				DB3422AF176A66580050B301 /* Supporting Files */,
@@ -273,6 +296,9 @@
 				DB3422B5176A66580050B301 /* main.m in Sources */,
 				DB3422B9176A66580050B301 /* AppDelegate.m in Sources */,
 				DB3422C5176A66580050B301 /* ViewController.m in Sources */,
+				DB3422E5176A69C10050B301 /* mainMenuViewController.m in Sources */,
+				DB3422F4176BFD490050B301 /* mapBanksViewController.m in Sources */,
+				DB342306176D11620050B301 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +473,7 @@
 				DB3422DF176A66580050B301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB3422E0176A66580050B301 /* Build configuration list for PBXNativeTarget "BankMapperTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +482,7 @@
 				DB3422E2176A66580050B301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
