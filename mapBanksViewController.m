@@ -51,33 +51,6 @@
 
 
 
-//- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-//
-//    self.currentLocation = newLocation;
-//    [locationManager stopUpdatingLocation];
-////    if(newLocation.horizontalAccuracy <= 100.0f)
-////    {
-////        [locationManager stopUpdatingLocation];
-//        NSLog(@" lon: %f, lat:%f", currentLocation.coordinate.longitude, currentLocation.coordinate.latitude);
-////    }
-//    [self displayMap];
-//}
-//
-//- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-//
-//    if(error.code == kCLErrorDenied) {
-//        [locationManager stopUpdatingLocation];
-//    } else if(error.code == kCLErrorLocationUnknown) {
-//        // retry
-//    } else {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error retrieving location"
-//                                                        message:[error description]
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
-//    }
-//}
 
 -(void)displayMap
 {
@@ -148,7 +121,7 @@
     
     
     
-    NSString * searchURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%lf,%lf&radius=%d&keyword=pharmacy&sensor=true&key=AIzaSyAOf09QMaGZ41ZWcUudxTrftmh-q92uMeU", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude, radius];
+    NSString * searchURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%lf,%lf&radius=%d&keyword=bank&sensor=true&key=AIzaSyAOf09QMaGZ41ZWcUudxTrftmh-q92uMeU", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude, radius];
     
     searchURL =  [searchURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
