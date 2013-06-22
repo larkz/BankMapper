@@ -7,6 +7,8 @@
 //
 
 #import "mainMenuViewController.h"
+#import "mapBanksViewController.h"
+#import "selectBanksViewController.h"
 
 @implementation mainMenuViewController
 
@@ -29,10 +31,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.banksList = [NSArray arrayWithObjects:@"CIBC", @"RBC",@"TD", @"BMO", @"ScotiaBank", nil];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+
+   
+        
+        NSLog(@"INITIALIZe BANK LIST");
+        self.banksList = [NSArray arrayWithObjects:@"CIBC", @"RBC",@"TD", @"BMO", @"ScotiaBank", @"Larkin",nil];
+        
+        
     
+    NSLog(@"Banks List from User Defaults%@", [defaults objectForKey:@"banksList"]);
+    [defaults synchronize];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [self.dataPickerView setDataSource: self];
     [self.dataPickerView setDelegate: self];
@@ -85,6 +95,33 @@
     
     
 }
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    if ([segue.identifier isEqualToString:@"toMapBanksView"]){
+        
+        
+        mapBanksViewController *destViewController = (mapBanksViewController*)segue.destinationViewController;
+        destViewController.bankArray = self.banksList;
+        
+        
+    }else if ([segue.identifier isEqualToString:@"toSelectBanksSegue"]){
+        
+        selectBanksViewController *destViewController = (selectBanksViewController *)segue.destinationViewController;
+        
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        destViewController.tempBanksList = [defaults objectForKey:@"banksList"];
+        
+        destViewController.banksList = self.banksList;
+    }
+
+}
+
+
+
 
 
 

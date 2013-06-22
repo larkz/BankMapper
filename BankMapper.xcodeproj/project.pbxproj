@@ -28,6 +28,7 @@
 		DB3422FB176C00930050B301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3422FA176C00930050B301 /* MapKit.framework */; };
 		DB342306176D11620050B301 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB342305176D11620050B301 /* MyAnnotation.m */; };
 		DB342309176D15D60050B301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB342308176D15D60050B301 /* CoreLocation.framework */; };
+		DBE7D9D71772A62B008C010D /* selectBanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE7D9D61772A62B008C010D /* selectBanksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		DB342304176D11620050B301 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		DB342305176D11620050B301 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		DB342308176D15D60050B301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DBE7D9D51772A62B008C010D /* selectBanksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectBanksViewController.h; sourceTree = "<group>"; };
+		DBE7D9D61772A62B008C010D /* selectBanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectBanksViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				DB3422B7176A66580050B301 /* AppDelegate.h */,
 				DB3422B8176A66580050B301 /* AppDelegate.m */,
 				DB3422C0176A66580050B301 /* MainStoryboard.storyboard */,
+				DBE7D9D51772A62B008C010D /* selectBanksViewController.h */,
+				DBE7D9D61772A62B008C010D /* selectBanksViewController.m */,
 				DB3422E3176A69C10050B301 /* mainMenuViewController.h */,
 				DB3422E4176A69C10050B301 /* mainMenuViewController.m */,
 				DB3422F2176BFD490050B301 /* mapBanksViewController.h */,
@@ -299,6 +304,7 @@
 				DB3422E5176A69C10050B301 /* mainMenuViewController.m in Sources */,
 				DB3422F4176BFD490050B301 /* mapBanksViewController.m in Sources */,
 				DB342306176D11620050B301 /* MyAnnotation.m in Sources */,
+				DBE7D9D71772A62B008C010D /* selectBanksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

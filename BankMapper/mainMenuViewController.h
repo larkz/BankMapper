@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mapBanksViewController.h"
+#import "selectBanksViewController.h"
 
 @interface mainMenuViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -19,7 +21,7 @@
 
 @property (strong, nonatomic) IBOutlet UIPickerView *dataPickerView;
 
-@property (strong, nonatomic) NSArray * banksList;
+@property (strong, nonatomic) NSMutableArray * banksList;
 
 - (IBAction)selectDistanceAction:(id)sender;
 - (IBAction)selectBanksAction:(id)sender;

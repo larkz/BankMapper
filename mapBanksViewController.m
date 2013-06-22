@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Larkin. All rights reserved.
 //
 
-
-
 #import "mapBanksViewController.h"
 
 @interface mapBanksViewController ()
@@ -16,7 +14,7 @@
 
 @implementation mapBanksViewController
 
-@synthesize mapView, currentLocation, locationManager, radius;
+@synthesize mapView, currentLocation, locationManager, radius, searchURL, bankArray, bankSearchKeyword;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -115,15 +113,45 @@
     }
     
     
+    //Set default radius
+    self.radius = 5000;
+    
+    
     NSLog(@"Indicate Radius: %d", self.radius);
+   
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
+    self.bankArray = [defaults objectForKey:@"banksList"];
+    
+    NSLog(@"bank array from NSUserDefaults %@", self.bankArray);
     
     
+    self.bankSearchKeyword = @"";
+    for (NSString * string in self.bankArray ) {
+        
+        if([self.bankArray count] > [self.bankArray indexOfObject:string]+1)
+        
+        self.bankSearchKeyword = [[self.bankSearchKeyword stringByAppendingString:string] stringByAppendingString:@"+OR+"];
+        
+        else{
+            
+            self.bankSearchKeyword = [self.bankSearchKeyword stringByAppendingString:string];
+            
+        }
+    }
     
+
     
+    self.searchURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%lf,%lf&radius=%d&keyword=",currentLocation.coordinate.latitude, currentLocation.coordinate.longitude, radius];
     
-    NSString * searchURL = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%lf,%lf&radius=%d&keyword=bank&sensor=true&key=AIzaSyAOf09QMaGZ41ZWcUudxTrftmh-q92uMeU", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude, radius];
+    self.searchURL = [[self.searchURL stringByAppendingString:self.bankSearchKeyword] stringByAppendingString:@"&sensor=true&key=AIzaSyAOf09QMaGZ41ZWcUudxTrftmh-q92uMeU"];
+        
+    
+    NSLog(@"Google API URL: %@", searchURL);
     
     searchURL =  [searchURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    
     
     NSURL* url = [[NSURL alloc] initWithString:searchURL];
     

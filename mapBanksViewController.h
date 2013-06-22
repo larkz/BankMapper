@@ -22,11 +22,15 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) NSString * radiusStr;
+@property (strong, nonatomic) NSString * searchURL;
+@property (strong, nonatomic) NSString * bankSearchKeyword;
+
+@property (strong, nonatomic) NSMutableArray * bankArray;
+
 
 @property (nonatomic, assign) int radius;
 
--(void)displayMap;
--(void)addPharmacies;
+-(void)displayMap;-(void)addPharmacies;
 
 
 @end
